@@ -3,7 +3,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 import time
 
-driver = webdriver.Chrome(service=Service("./chromedriver.exe"))
+driver = webdriver.Chrome(service=Service("./chromedriver"))
 txt = "My name is sunil"
 driver.get("https://tapshare.xyz/")
 time.sleep(5)
