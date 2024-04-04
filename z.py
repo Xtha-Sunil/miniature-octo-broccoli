@@ -1,10 +1,9 @@
-import os
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 import time
 
-EXECUTABLE_PATH = os.getenv("CHROMEDRIVER_PATH", "chromedriver.exe")
+EXECUTABLE_PATH = "chromedriver.exe"
 driver = webdriver.Chrome(service=Service(executable_path=EXECUTABLE_PATH))
 
 txt = "My name is sunil"
