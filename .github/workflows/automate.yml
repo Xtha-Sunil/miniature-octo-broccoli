@@ -2,7 +2,7 @@ name: Run Selenium Project
 
 on:
   schedule:
-    - cron: '* * * * *'  # Run daily at 6 am
+    - cron: '* * * * *'
 
 jobs:
   run-selenium:
