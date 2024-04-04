@@ -12,9 +12,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: Set up Chrome
-        uses: actions/setup-chrome@v2
+        
+      - uses: browser-actions/setup-chrome@v1
+      - run: chrome --version
 
       - name: Set up Python
         uses: actions/setup-python@v2
