@@ -1,9 +1,10 @@
+import os
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 import time
 
-EXECUTABLE_PATH = "chromedriver.exe"
+EXECUTABLE_PATH = os.getenv("CHROMEDRIVER_PATH", "chromedriver.exe")
 driver = webdriver.Chrome(service=Service(executable_path=EXECUTABLE_PATH))
 
 txt = "My name is sunil"
@@ -23,4 +24,3 @@ driver.find_element(By.CSS_SELECTOR, "button[role='submit']").click()
 time.sleep(6)
 code = driver.find_element(By.CSS_SELECTOR, '#root > div > div > div:nth-child(3) > div.px-3.py-2 > div > button')
 code.click()
-input("Press Enter to continue...")
